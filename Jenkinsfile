@@ -3,7 +3,9 @@ pipeline{
   stages{
     stage("build")
     {
-      sh 'mvn clean package'
+      steps{
+        sh 'mvn clean package'
+      }
     }
     stage("getting code from github")
     {
