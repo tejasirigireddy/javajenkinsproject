@@ -1,6 +1,10 @@
 pipeline{
   agent any
   stages{
+    stage("build")
+    {
+      sh 'mvn clean package'
+    }
     stage("getting code from github")
     {
       steps{
